@@ -5,6 +5,8 @@ expect = chai.expect
 
 helper = new Helper('../src/source.coffee')
 
+process.env.HUBOT_SOURCE_URL = "http://example.com"
+
 describe 'source', ->
   beforeEach ->
     @room = helper.createRoom()
@@ -12,16 +14,23 @@ describe 'source', ->
   afterEach ->
     @room.destroy()
 
-  it 'responds to hello', ->
-    @room.user.say('alice', '@hubot hello').then =>
+  it 'responds to where\'s the source', ->
+    @room.user.say('alice', '@hubot where\'s the source').then =>
       expect(@room.messages).to.eql [
-        ['alice', '@hubot hello']
-        ['hubot', '@alice hello!']
+        ['alice', '@hubot where\'s the source']
+        ['hubot', '@alice http://example.com']
       ]
 
-  it 'hears orly', ->
-    @room.user.say('bob', 'just wanted to say orly').then =>
+  it 'responds when there\'s a question mark', ->
+    @room.user.say('alice', '@hubot where\'s the source?').then =>
       expect(@room.messages).to.eql [
-        ['bob', 'just wanted to say orly']
-        ['hubot', 'yarly']
+        ['alice', '@hubot where\'s the source?']
+        ['hubot', '@alice http://example.com']
+      ]
+
+  it 'responds without a contraction', ->
+    @room.user.say('alice', '@hubot where is the source').then =>
+      expect(@room.messages).to.eql [
+        ['alice', '@hubot where is the source']
+        ['hubot', '@alice http://example.com']
       ]

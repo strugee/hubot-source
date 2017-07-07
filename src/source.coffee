@@ -1,22 +1,15 @@
 # Description
-#   \"hubot: where's the source?\"
+#   "hubot: where's the source?"
 #
 # Configuration:
-#   LIST_OF_ENV_VARS_TO_SET
+#   HUBOT_SOURCE_URL
 #
 # Commands:
-#   hubot hello - <what the respond trigger does>
-#   orly - <what the hear trigger does>
-#
-# Notes:
-#   <optional notes required for the script>
+#   hubot where's the source? - replies with the URL for my source code
 #
 # Author:
 #   AJ Jordan <alex@strugee.net>
 
 module.exports = (robot) ->
-  robot.respond /hello/, (res) ->
-    res.reply "hello!"
-
-  robot.hear /orly/, (res) ->
-    res.send "yarly"
+  robot.respond /(?:where's|where is) the source\??/i, (res) ->
+    res.reply process.env.HUBOT_SOURCE_URL
