@@ -34,3 +34,10 @@ describe 'source', ->
         ['alice', '@hubot where is the source']
         ['hubot', '@alice http://example.com']
       ]
+
+  it 'responds to "source code"', ->
+    @room.user.say('alice', '@hubot where is the source code').then =>
+      expect(@room.messages).to.eql [
+        ['alice', '@hubot where is the source code']
+        ['hubot', '@alice http://example.com']
+      ]
