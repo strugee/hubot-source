@@ -1,6 +1,6 @@
 # hubot-source
 
-\"hubot: where's the source?\"
+"hubot: where's the source?"
 
 See [`src/source.coffee`](src/source.coffee) for full documentation.
 
@@ -18,13 +18,23 @@ Then add **hubot-source** to your `external-scripts.json`:
 ]
 ```
 
+## Configuration
+
+hubot-source expects one environment variable, `HUBOT_SOURCE_URL`. This is the URL that will be sent back when a user requests the source code.
+
 ## Sample Interaction
 
 ```
-user1>> hubot hello
-hubot>> hello!
+user1>> hubot where's the source?
+hubot>> http://example.com/
 ```
 
-## NPM Module
+## License
 
-https://www.npmjs.com/package/hubot-source
+LGPL 3.0+
+
+## Author
+
+AJ Jordan <alex@strugee.net>
+
+Originally extracted from the [pump.io](http://pump.io) project's [pumabot](https://github.com/pump-io/pumabot).
