@@ -1,5 +1,7 @@
 # hubot-source
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/strugee/hubot-source.svg)](https://greenkeeper.io/)
+
 "hubot: where's the source?"
 
 See [`src/source.coffee`](src/source.coffee) for full documentation.
