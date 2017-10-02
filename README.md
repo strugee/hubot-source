@@ -1,5 +1,7 @@
 # hubot-source
 
+[![Build Status](https://travis-ci.org/strugee/hubot-source.svg?branch=master)](https://travis-ci.org/strugee/hubot-source)
+[![Coverage Status](https://coveralls.io/repos/github/strugee/hubot-source/badge.svg?branch=master)](https://coveralls.io/github/strugee/hubot-source?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/strugee/hubot-source.svg)](https://greenkeeper.io/)
 
 "hubot: where's the source?"
