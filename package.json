@@ -37,6 +37,9 @@
   "scripts": {
     "test": "nyc -r text -r lcov grunt test"
   },
+  "engines": {
+    "node": ">=6"
+  },
   "nyc": {
     "extension": [
       ".coffee"
