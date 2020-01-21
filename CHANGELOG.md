@@ -11,6 +11,7 @@
 ### Breaking
 
 * Drop Node 4 and Node 6 support
+* Upgrade to hubot@3
 
 ## 1.0.0 - 2017-07-07
 
