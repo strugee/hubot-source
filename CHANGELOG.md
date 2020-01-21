@@ -4,9 +4,13 @@
 
 ## 2.0.0 - future
 
+### Added
+
+* Node 8, 10, and 12 support
+
 ### Breaking
 
-* Drop Node 4 support
+* Drop Node 4 and Node 6 support
 
 ## 1.0.0 - 2017-07-07
 
